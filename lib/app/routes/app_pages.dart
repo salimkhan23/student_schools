@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/home_screen/bindings/home_screen_binding.dart';
 import '../modules/home_screen/views/home_screen_view.dart';
+import '../modules/login_screen/bindings/login_screen_binding.dart';
+import '../modules/login_screen/views/login_screen_view.dart';
 import '../modules/nav_screen/bindings/nav_screen_binding.dart';
 import '../modules/nav_screen/views/nav_screen_view.dart';
 import '../modules/onboard_screen/bindings/onboard_screen_binding.dart';
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.USER_SELECT_INPUT,
       page: () => const UserSelectInputView(),
       binding: UserSelectInputBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN_SCREEN,
+      page: () => const LoginScreenView(),
+      binding: LoginScreenBinding(),
     ),
   ];
 }

@@ -8,6 +8,7 @@ abstract class Routes {
   static const NAV_SCREEN = _Paths.NAV_SCREEN;
   static const ONBOARD_SCREEN = _Paths.ONBOARD_SCREEN;
   static const USER_SELECT_INPUT = _Paths.USER_SELECT_INPUT;
+  static const LOGIN_SCREEN = _Paths.LOGIN_SCREEN;
 }
 
 abstract class _Paths {
@@ -17,4 +18,5 @@ abstract class _Paths {
   static const NAV_SCREEN = '/nav-screen';
   static const ONBOARD_SCREEN = '/onboard-screen';
   static const USER_SELECT_INPUT = '/user-select-input';
+  static const LOGIN_SCREEN = '/login-screen';
 }

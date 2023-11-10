@@ -8,10 +8,10 @@ class MImagesPath {
   static const String onboarding3 = 'assets/images/onboard/onboard3.png';
 
   // For User Input Student
-  static const String student1 = 'assets/studant_image/OIP.jpeg';
-  static const String student2 = 'assets/studant_image/student-1.png';
+  static const String student1 = 'assets/studants/student1.png';
+  static const String student2 = 'assets/studants/student2.png';
 
   // for teacher
   static const String teacher1 = 'assets/teacher/student-1.jpg';
-  static const String teacher2 = 'assets/teacher/OIP.jpeg';
+  static const String teacher2 = 'assets/teacher/Teacher_icon.png';
 }
