@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:student_schools/app/modules/login_screen/views/login_screen_view.dart';
 
@@ -11,7 +10,6 @@ class UserSelectInputView extends GetView<UserSelectInputController> {
   const UserSelectInputView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Get.put(UserSelectInputController());
     return Scaffold(
         body: Center(
       child: Column(

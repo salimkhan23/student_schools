@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
+import 'package:student_schools/app/modules/home_screen/views/home_screen_view.dart';
 import 'package:student_schools/m_image_path.dart';
 import 'package:student_schools/widgets/m_asset_image.dart';
 
@@ -33,23 +33,18 @@ class LoginScreenView extends GetView<LoginScreenController> {
                           path: MImagesPath.student1,
                           size: 250,
                         )),
-
                   Obx(
                     () => Padding(
                       padding: const EdgeInsets.symmetric(vertical: 30),
                       child: Text(
                         controller.isTeacher.value
                             ? 'Wellcome Teacher'
-                            : 'Wellcome',
+                            : 'Wellcome Student',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
                     ),
                   ),
-
-                  ////////////
-                  ///
-
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -62,11 +57,9 @@ class LoginScreenView extends GetView<LoginScreenController> {
                       ),
                     ],
                   ),
-
                   SizedBox(
                     height: 10,
                   ),
-
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -88,17 +81,18 @@ class LoginScreenView extends GetView<LoginScreenController> {
                       Text('forgot password'),
                       TextButton(
                           onPressed: () {
-                            controller.forgetDailog();
+                            controller.forgetdialog();
                           },
                           child: Text('Forgot Password'))
                     ],
                   ),
-
                   SizedBox(
                     height: 20,
                   ),
                   ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(HomeScreenView());
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
                         foregroundColor: Colors.white,

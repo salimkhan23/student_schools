@@ -8,11 +8,11 @@ class LoginScreenController extends GetxController {
   @override
   void onInit() {
     isTeacher.value = Get.arguments ?? false;
-    forgetDailog();
+
     super.onInit();
   }
 
-  forgetDailog() {
+  forgetdialog() {
     return Get.dialog(
       Dialog(
         child: Padding(
