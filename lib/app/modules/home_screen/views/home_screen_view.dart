@@ -12,6 +12,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
       appBar: AppBar(
         title: const Text('HomeScreenView'),
         centerTitle: true,
+        backgroundColor: Colors.white,
       ),
       body: const Center(
         child: Text(

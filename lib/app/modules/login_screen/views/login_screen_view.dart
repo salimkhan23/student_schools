@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:student_schools/app/modules/home_screen/views/home_screen_view.dart';
+import 'package:student_schools/app/routes/app_pages.dart';
 import 'package:student_schools/m_image_path.dart';
 import 'package:student_schools/widgets/m_asset_image.dart';
 
@@ -91,7 +91,7 @@ class LoginScreenView extends GetView<LoginScreenController> {
                   ),
                   ElevatedButton(
                       onPressed: () {
-                        Get.to(HomeScreenView());
+                        Get.offAllNamed(Routes.NAV_SCREEN);
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,

@@ -9,6 +9,8 @@ abstract class Routes {
   static const ONBOARD_SCREEN = _Paths.ONBOARD_SCREEN;
   static const USER_SELECT_INPUT = _Paths.USER_SELECT_INPUT;
   static const LOGIN_SCREEN = _Paths.LOGIN_SCREEN;
+  static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
+  static const NOTICS = _Paths.NOTICS;
 }
 
 abstract class _Paths {
@@ -19,4 +21,6 @@ abstract class _Paths {
   static const ONBOARD_SCREEN = '/onboard-screen';
   static const USER_SELECT_INPUT = '/user-select-input';
   static const LOGIN_SCREEN = '/login-screen';
+  static const PROFILE_SCREEN = '/profile-screen';
+  static const NOTICS = '/notics';
 }

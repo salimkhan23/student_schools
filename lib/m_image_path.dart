@@ -1,6 +1,8 @@
 class MImagesPath {
   //APP LOGO
   static const String appLogo = 'assets/app_logo/app_logo.png';
+  static const String salim = 'assets/app_logo/SALIM_KHAN.jpg';
+  static const String salimkhan = 'assets/app_logo/smsm.png';
 
   // For Onboard Image
   static const String onboarding1 = 'assets/images/onboard/onboard1.png';
