@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:student_schools/m_image_path.dart';
+
+import '../../../../widgets/m_app_header.dart';
 
 import '../controllers/nav_screen_controller.dart';
 
@@ -18,39 +19,9 @@ class NavScreenView extends GetView<NavScreenController> {
             children: [
               Column(
                 children: [
-                  Container(
-                    height: 200,
-                    width: 400,
-                    color: Colors.blue,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Row(
-                            children: [
-                              CircleAvatar(
-                                backgroundImage: AssetImage(MImagesPath.salim),
-                                maxRadius: 50,
-                              ),
-                              SizedBox(width: 10),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text('SALIM_KHAN',
-                                      style: TextStyle(color: Colors.white)),
-                                  Text('Student : Univers IT',
-                                      style: TextStyle(color: Colors.white)),
-                                  Text('ID : 465517',
-                                      style: TextStyle(color: Colors.white)),
-                                ],
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
+                  MAppHeader(
+                    paddin: 0,
+                    redius: 0,
                   ),
                   SizedBox(height: 10),
                   Padding(
@@ -131,13 +102,17 @@ class NavScreenView extends GetView<NavScreenController> {
       ),
       body: Obx(() => controller.bodyList[controller.selectIndex.value]),
       floatingActionButton: FloatingActionButton(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+              side: BorderSide(color: Colors.orange, width: 5)),
           onPressed: () {
             controller.selectIndex.value = 2;
           },
           child: Icon(Icons.contact_support)),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        color: Colors.blueGrey,
+        notchMargin: 6,
+        color: Colors.grey,
         shape: CircularNotchedRectangle(),
         height: 80,
         child: Row(
