@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/academic/bindings/academic_binding.dart';
+import '../modules/academic/views/academic_view.dart';
 import '../modules/home_screen/bindings/home_screen_binding.dart';
 import '../modules/home_screen/views/home_screen_view.dart';
 import '../modules/login_screen/bindings/login_screen_binding.dart';
@@ -64,6 +66,11 @@ class AppPages {
       name: _Paths.NOTICS,
       page: () => const NoticsView(),
       binding: NoticsBinding(),
+    ),
+    GetPage(
+      name: _Paths.ACADEMIC,
+      page: () => const AcademicView(),
+      binding: AcademicBinding(),
     ),
   ];
 }

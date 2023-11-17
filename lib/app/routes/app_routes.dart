@@ -11,6 +11,7 @@ abstract class Routes {
   static const LOGIN_SCREEN = _Paths.LOGIN_SCREEN;
   static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
   static const NOTICS = _Paths.NOTICS;
+  static const ACADEMIC = _Paths.ACADEMIC;
 }
 
 abstract class _Paths {
@@ -23,4 +24,5 @@ abstract class _Paths {
   static const LOGIN_SCREEN = '/login-screen';
   static const PROFILE_SCREEN = '/profile-screen';
   static const NOTICS = '/notics';
+  static const ACADEMIC = '/academic';
 }

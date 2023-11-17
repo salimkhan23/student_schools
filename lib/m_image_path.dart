@@ -16,4 +16,12 @@ class MImagesPath {
   // for teacher
   static const String teacher1 = 'assets/teacher/student-1.jpg';
   static const String teacher2 = 'assets/teacher/Teacher_icon.png';
+
+  // Icons Images
+  static const String icons1 = 'assets/images/icons_image/Academic.png';
+  static const String icons2 = 'assets/images/icons_image/calendar1.png';
+  static const String icons3 = 'assets/images/icons_image/Transport.png';
+  static const String icons4 = 'assets/images/icons_image/Library.png';
+  static const String icons5 = 'assets/images/icons_image/Leave.png';
+  static const String icons6 = 'assets/images/icons_image/Time_clock.png';
 }
