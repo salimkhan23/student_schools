@@ -19,9 +19,9 @@ class MImagesPath {
 
   // Icons Images
   static const String icons1 = 'assets/images/icons_image/Academic.png';
-  static const String icons2 = 'assets/images/icons_image/calendar1.png';
+  static const String icons2 = 'assets/images/icons_image/Attendance.png';
   static const String icons3 = 'assets/images/icons_image/Transport.png';
   static const String icons4 = 'assets/images/icons_image/Library.png';
   static const String icons5 = 'assets/images/icons_image/Leave.png';
-  static const String icons6 = 'assets/images/icons_image/Time_clock.png';
+  static const String icons6 = 'assets/images/icons_image/Time-Clock.png';
 }

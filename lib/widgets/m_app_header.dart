@@ -56,7 +56,7 @@ class MAppHeader extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         MText(textValue: 'SALIM KHAN'),
-                        MText(textValue: 'Student : Univers UT'),
+                        MText(textValue: 'Student : Univers IT'),
                         MText(textValue: 'ID : 465517'),
                       ],
                     )

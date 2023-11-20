@@ -12,6 +12,10 @@ abstract class Routes {
   static const PROFILE_SCREEN = _Paths.PROFILE_SCREEN;
   static const NOTICS = _Paths.NOTICS;
   static const ACADEMIC = _Paths.ACADEMIC;
+  static const ATTENDANCE = _Paths.ATTENDANCE;
+  static const TRANSPORT = _Paths.TRANSPORT;
+  static const LIBRARY = _Paths.LIBRARY;
+  static const LEAVE = _Paths.LEAVE;
 }
 
 abstract class _Paths {
@@ -25,4 +29,8 @@ abstract class _Paths {
   static const PROFILE_SCREEN = '/profile-screen';
   static const NOTICS = '/notics';
   static const ACADEMIC = '/academic';
+  static const ATTENDANCE = '/attendance';
+  static const TRANSPORT = '/transport';
+  static const LIBRARY = '/library';
+  static const LEAVE = '/leave';
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:student_schools/app/modules/academic/views/academic_view.dart';
+import 'package:student_schools/app/modules/attendance/views/attendance_view.dart';
 import 'package:student_schools/app/modules/home_screen/models/home_item.dart';
 import 'package:student_schools/m_image_path.dart';
 
@@ -12,7 +13,10 @@ class HomeScreenController extends GetxController {
         text: 'Academic',
         imageIcon: Image.asset(MImagesPath.icons1),
         widget: AcademicView()),
-    HomeItemSM(text: 'Attendance', imageIcon: Image.asset(MImagesPath.icons1)),
+    HomeItemSM(
+        text: 'Attendance',
+        imageIcon: Image.asset(MImagesPath.icons2),
+        widget: AttendanceView()),
     HomeItemSM(text: 'Transport', imageIcon: Image.asset(MImagesPath.icons3)),
     HomeItemSM(text: 'Library', imageIcon: Image.asset(MImagesPath.icons4)),
     HomeItemSM(text: 'Leave', imageIcon: Image.asset(MImagesPath.icons5)),

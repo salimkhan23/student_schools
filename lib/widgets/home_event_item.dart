@@ -16,7 +16,7 @@ class HomeEventItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: Container(
-        height: 100,
+        height: 80,
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(10)),
         child: Row(

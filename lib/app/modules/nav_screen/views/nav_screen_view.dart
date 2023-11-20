@@ -11,6 +11,7 @@ class NavScreenView extends GetView<NavScreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       drawer: Drawer(
         backgroundColor: Colors.grey,
         child: SafeArea(

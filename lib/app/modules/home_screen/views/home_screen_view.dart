@@ -65,7 +65,7 @@ class HomeScreenView extends GetView<HomeScreenController> {
             ),
           ),
           Container(
-            height: 500,
+            height: 600,
             width: Get.width,
             decoration: BoxDecoration(
                 color: Colors.blue,
@@ -95,8 +95,8 @@ class HomeScreenView extends GetView<HomeScreenController> {
                 Expanded(
                     child: ListView.builder(
                   physics: NeverScrollableScrollPhysics(),
-                  itemCount: (controller.homeEventList.length > 3)
-                      ? 3
+                  itemCount: (controller.homeEventList.length > 4)
+                      ? 4
                       : controller.homeEventList.length,
                   itemBuilder: (context, index) {
                     final HomeEvent item = controller.homeEventList[index];
