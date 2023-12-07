@@ -16,13 +16,13 @@ class OnboardScreenView extends GetView<OnboardScreenController> {
             Obx(
               () => controller.onBoardDataList.length - 1 ==
                       controller.index.value
-                  ? SizedBox()
+                  ? const SizedBox()
                   : TextButton(
                       onPressed: () {},
-                      child: Text('Skip'),
+                      child: const Text('Skip'),
                     ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
           ],
@@ -48,19 +48,19 @@ class OnboardScreenView extends GetView<OnboardScreenController> {
                                 fit: BoxFit.fill,
                                 image: AssetImage(data.imgUrl))),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Text(
                         data.title,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
                         data.subTitle,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                     ],
@@ -78,7 +78,7 @@ class OnboardScreenView extends GetView<OnboardScreenController> {
                         (index) => Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: AnimatedContainer(
-                                duration: Duration(seconds: 1),
+                                duration: const Duration(seconds: 1),
                                 width:
                                     controller.index.value == index ? 40 : 20,
                                 height: 20,
@@ -94,20 +94,20 @@ class OnboardScreenView extends GetView<OnboardScreenController> {
                 onPressed: () {
                   controller.toNextScreen();
                 },
-                child: controller.onBoardDataList.length - 1 !=
-                        controller.index.value
-                    ? Text('Next')
-                    : Text('Get Start'),
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 15),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   backgroundColor: Colors.blue,
                   foregroundColor: Colors.white,
                 ),
+                child: controller.onBoardDataList.length - 1 !=
+                        controller.index.value
+                    ? const Text('Next')
+                    : const Text('Get Start'),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             )
           ],

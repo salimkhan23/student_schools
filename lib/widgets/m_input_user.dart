@@ -31,21 +31,21 @@ class _MInputUserState extends State<MInputUser> {
                   });
                 },
                 icon: showPassword
-                    ? Icon(Icons.visibility)
-                    : Icon(Icons.visibility_off))
+                    ? const Icon(Icons.visibility)
+                    : const Icon(Icons.visibility_off))
             : null,
         border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.grey)),
+            borderSide: const BorderSide(color: Colors.grey)),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.grey)),
+            borderSide: const BorderSide(color: Colors.grey)),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.grey)),
+            borderSide: const BorderSide(color: Colors.grey)),
         errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
-            borderSide: BorderSide(color: Colors.red)),
+            borderSide: const BorderSide(color: Colors.red)),
       ),
     );
   }

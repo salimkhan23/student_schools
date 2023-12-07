@@ -20,8 +20,8 @@ class SplashScreenView extends GetView<SplashScreenController> {
               width: Get.width / 2,
               height: Get.width / 2,
             ),
-            SizedBox(height: 30),
-            SizedBox(
+            const SizedBox(height: 30),
+            const SizedBox(
               height: 100,
               width: 100,
               child: CircularProgressIndicator(

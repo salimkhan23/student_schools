@@ -14,7 +14,7 @@ class LoginScreenView extends GetView<LoginScreenController> {
     Get.put(LoginScreenController());
     return Scaffold(
         appBar: AppBar(
-          title: const Text('LoginScreenView'),
+          title: const Text('Login'),
           centerTitle: true,
         ),
         body: Center(
@@ -25,11 +25,11 @@ class LoginScreenView extends GetView<LoginScreenController> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Obx(() => controller.isTeacher.value
-                      ? MAssetImage(
+                      ? const MAssetImage(
                           path: MImagesPath.teacher2,
                           size: 300,
                         )
-                      : MAssetImage(
+                      : const MAssetImage(
                           path: MImagesPath.student1,
                           size: 250,
                         )),
@@ -40,12 +40,12 @@ class LoginScreenView extends GetView<LoginScreenController> {
                         controller.isTeacher.value
                             ? 'Wellcome Teacher'
                             : 'Wellcome Student',
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
                     ),
                   ),
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('User id'),
@@ -57,10 +57,10 @@ class LoginScreenView extends GetView<LoginScreenController> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Password'),
@@ -73,20 +73,20 @@ class LoginScreenView extends GetView<LoginScreenController> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
                     children: [
-                      Text('forgot password'),
+                      const Text('forgot password'),
                       TextButton(
                           onPressed: () {
                             controller.forgetdialog();
                           },
-                          child: Text('Forgot Password'))
+                          child: const Text('Forgot Password'))
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   ElevatedButton(
@@ -98,10 +98,10 @@ class LoginScreenView extends GetView<LoginScreenController> {
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5)),
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 50, vertical: 10),
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text('Login'),

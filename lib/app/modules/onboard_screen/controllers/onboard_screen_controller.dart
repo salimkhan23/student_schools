@@ -17,7 +17,7 @@ class OnboardScreenController extends GetxController {
     } else {
       index.value++;
       onboardPageController.nextPage(
-          duration: Duration(seconds: 1), curve: Curves.ease);
+          duration: const Duration(seconds: 1), curve: Curves.ease);
     }
   }
 

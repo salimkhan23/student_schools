@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/academic/bindings/academic_binding.dart';
 import '../modules/academic/views/academic_view.dart';
+import '../modules/allEvent/bindings/all_event_binding.dart';
+import '../modules/allEvent/views/all_event_view.dart';
 import '../modules/attendance/bindings/attendance_binding.dart';
 import '../modules/attendance/views/attendance_view.dart';
 import '../modules/home_screen/bindings/home_screen_binding.dart';
@@ -16,6 +18,8 @@ import '../modules/nav_screen/bindings/nav_screen_binding.dart';
 import '../modules/nav_screen/views/nav_screen_view.dart';
 import '../modules/notics/bindings/notics_binding.dart';
 import '../modules/notics/views/notics_view.dart';
+import '../modules/notification/bindings/notification_binding.dart';
+import '../modules/notification/views/notification_view.dart';
 import '../modules/onboard_screen/bindings/onboard_screen_binding.dart';
 import '../modules/onboard_screen/views/onboard_screen_view.dart';
 import '../modules/profile_screen/bindings/profile_screen_binding.dart';
@@ -99,6 +103,16 @@ class AppPages {
       name: _Paths.LEAVE,
       page: () => const LeaveView(),
       binding: LeaveBinding(),
+    ),
+    GetPage(
+      name: _Paths.ALL_EVENT,
+      page: () => const AllEventView(),
+      binding: AllEventBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATION,
+      page: () => const NotificationView(),
+      binding: NotificationBinding(),
     ),
   ];
 }

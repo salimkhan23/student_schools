@@ -20,21 +20,21 @@ class AttendanceView extends GetView<AttendanceController> {
         ),
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Expanded(
               child: Container(
                 height: 500,
                 width: Get.width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20))),
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     SizedBox(
@@ -44,7 +44,7 @@ class AttendanceView extends GetView<AttendanceController> {
                         scrollDirection: Axis.horizontal,
                         child: Row(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               width: 20,
                             ),
                             // Obx(
@@ -68,46 +68,49 @@ class AttendanceView extends GetView<AttendanceController> {
                             // ),
                             Obx(
                               () => MDropdownButton(
-                                value: controller.value.value,
+                                value: controller.valueClass.value,
                                 dataList: controller.attendanceTabList,
                                 onChanged: (Value) {
-                                  controller.value.value = Value.toString();
+                                  controller.valueClass.value =
+                                      Value.toString();
                                 },
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Obx(
                               () => MDropdownButton(
-                                value: controller.value.value,
-                                dataList: controller.attendanceTabList,
+                                value: controller.valueSection.value,
+                                dataList: controller.attendanceSection,
                                 onChanged: (Value) {
-                                  controller.value.value = Value.toString();
+                                  controller.valueSection.value =
+                                      Value.toString();
                                 },
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Obx(
                               () => MDropdownButton(
-                                value: controller.value.value,
-                                dataList: controller.attendanceTabList,
+                                value: controller.valueGroup.value,
+                                dataList: controller.attendanceGroup,
                                 onChanged: (Value) {
-                                  controller.value.value = Value.toString();
+                                  controller.valueGroup.value =
+                                      Value.toString();
                                 },
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Obx(
                               () => MDropdownButton(
-                                value: controller.value.value,
-                                dataList: controller.attendanceTabList,
+                                value: controller.valueYear.value,
+                                dataList: controller.attendanceYear,
                                 onChanged: (Value) {
-                                  controller.value.value = Value.toString();
+                                  controller.valueYear.value = Value.toString();
                                 },
                               ),
                             ),

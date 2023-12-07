@@ -17,20 +17,20 @@ class MDropdownButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 10, right: 10),
+      padding: const EdgeInsets.only(left: 10, right: 10),
       height: 50,
       width: 100,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(10)),
       child: DropdownButton(
           isExpanded: true,
-          style: TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black),
           hint: hinText,
           value: value,
           items: dataList
               .map((element) => DropdownMenuItem(
-                    child: Text(element.toString()),
                     value: element.toString(),
+                    child: Text(element.toString()),
                   ))
               .toList(),
           onChanged: onChanged),

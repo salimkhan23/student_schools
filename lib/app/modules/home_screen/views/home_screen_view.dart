@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:student_schools/app/modules/home_screen/models/home_event.dart';
 import 'package:student_schools/app/modules/home_screen/models/home_item.dart';
+import 'package:student_schools/app/routes/app_pages.dart';
 import 'package:student_schools/widgets/home_event_item.dart';
 import 'package:student_schools/widgets/m_app_header.dart';
 import 'package:student_schools/widgets/m_text.dart';
@@ -17,19 +18,19 @@ class HomeScreenView extends GetView<HomeScreenController> {
         body: SingleChildScrollView(
       child: Column(
         children: [
-          MAppHeader(paddin: 20),
+          const MAppHeader(paddin: 20, sizeWidth: 40),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: SizedBox(
               height: Get.height / 10 * 3,
               width: Get.width,
               child: GridView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: controller.homeIconsList.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
-                  crossAxisSpacing: 20,
-                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
                   childAspectRatio: 1.0,
                 ),
                 itemBuilder: (context, index) {
@@ -38,21 +39,22 @@ class HomeScreenView extends GetView<HomeScreenController> {
                     onTap: () {
                       if (item.widget != null) {
                         Get.to(item.widget!,
-                            duration: Duration(seconds: 1), curve: Curves.ease);
+                            duration: const Duration(seconds: 1),
+                            curve: Curves.ease);
                       }
                     },
                     child: Column(
                       children: [
                         Material(
+                          elevation: 1,
+                          borderRadius: BorderRadius.circular(10),
                           child: SizedBox(
-                            height: 50,
-                            width: 50,
+                            height: 60,
+                            width: 60,
                             child: item.imageIcon,
                           ),
-                          elevation: 5,
-                          borderRadius: BorderRadius.circular(10),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         MText(
                           textValue: item.text,
                           textColor: Colors.black,
@@ -67,14 +69,14 @@ class HomeScreenView extends GetView<HomeScreenController> {
           Container(
             height: 600,
             width: Get.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 color: Colors.blue,
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20),
                     topRight: Radius.circular(20))),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -84,17 +86,22 @@ class HomeScreenView extends GetView<HomeScreenController> {
                         textValue: 'Upcoming Event',
                         fontSize: 16,
                         fontWeight: FontWeight.bold),
-                    MText(textValue: 'See All')
+                    InkWell(
+                        onTap: () {
+                          Get.toNamed(Routes.ALL_EVENT,
+                              arguments: controller.homeEventList);
+                        },
+                        child: MText(textValue: 'See All')),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 // HomeEventItem()
 
                 Expanded(
                     child: ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: (controller.homeEventList.length > 4)
                       ? 4
                       : controller.homeEventList.length,

@@ -1,32 +1,14 @@
 import 'package:get/get.dart';
 import 'package:student_schools/app/modules/attendance/models/student_data.dart';
-import 'package:student_schools/app/modules/attendance/models/student_section.dart';
 
 class AttendanceController extends GetxController {
-  RxString value = RxString("Class");
-  RxString value1 = RxString("Section");
-  RxString value2 = RxString("Group");
-  RxString value3 = RxString("Years");
-
-  RxList<StudentSection> studentSectionList = <StudentSection>[
-    StudentSection(classData: 'Class', sectionData: 'abcd', yeares: '2023'),
-    StudentSection(classData: 'Class', sectionData: 'abcd', yeares: '2023'),
-    StudentSection(classData: 'Class', sectionData: 'abcd', yeares: '2023'),
-    StudentSection(classData: 'Class', sectionData: 'abcd', yeares: '2023'),
-    StudentSection(classData: 'Class', sectionData: 'abcd', yeares: '2023'),
-  ].obs;
+  RxString valueClass = RxString("Class");
+  RxString valueSection = RxString("Section");
+  RxString valueGroup = RxString("Group");
+  RxString valueYear = RxString("Years");
 
   RxList attendanceTabList = [
     'Class',
-    // 'Data2',
-    // 'Data3',
-    // 'Data4',
-    // 'Data5',
-    // 'Data6',
-    // 'Data7',
-    // 'Data8',
-    // 'Data9',
-    // 'flutter',
     'One',
     'Two',
     'Three',
@@ -42,7 +24,7 @@ class AttendanceController extends GetxController {
     'Fourteen',
   ].obs;
 
-  RxList attendance01 = [
+  RxList attendanceSection = [
     'Section',
     'A',
     'B',
@@ -51,7 +33,7 @@ class AttendanceController extends GetxController {
     'E',
     'F',
   ].obs;
-  RxList attendance02 = [
+  RxList attendanceGroup = [
     'Group',
     'Computer',
     'Civil',
@@ -60,7 +42,7 @@ class AttendanceController extends GetxController {
     'Data Comunication',
   ].obs;
 
-  RxList attendance03 = [
+  RxList attendanceYear = [
     'Years',
     '2020',
     '2021',

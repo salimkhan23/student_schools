@@ -12,6 +12,7 @@ class MAppHeader extends StatelessWidget {
     this.imageSize = 100,
     this.imageShape = BoxShape.circle,
     this.imageRadius,
+    this.sizeWidth = 20,
   });
 
   final double paddin;
@@ -20,6 +21,7 @@ class MAppHeader extends StatelessWidget {
   final BoxShape imageShape;
   final BorderRadiusGeometry? imageRadius;
   final Color color;
+  final double sizeWidth;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -47,11 +49,11 @@ class MAppHeader extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: imageRadius,
                           shape: imageShape,
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage(MImagesPath.salim))),
                     ),
-                    SizedBox(width: 20),
-                    Column(
+                    SizedBox(width: sizeWidth),
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

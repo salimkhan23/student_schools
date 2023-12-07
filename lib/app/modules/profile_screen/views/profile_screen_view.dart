@@ -16,6 +16,7 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
           MAppHeader(
             imageShape: BoxShape.rectangle,
             imageRadius: BorderRadius.circular(20),
+            sizeWidth: 40,
           ),
           Padding(
             padding: const EdgeInsets.all(20.0),
@@ -26,9 +27,9 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                   color: Colors.blue, borderRadius: BorderRadius.circular(10)),
               child: Column(
                 children: [
-                  SizedBox(height: 10),
-                  MText(textValue: 'Student Information'),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
+                  const MText(textValue: 'Student Information'),
+                  const SizedBox(height: 10),
                   Container(
                       color: Colors.white,
                       height: 2,
@@ -37,8 +38,8 @@ class ProfileScreenView extends GetView<ProfileScreenController> {
                   ////////
                   //////
                   ///
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
+                  const Padding(
+                    padding: EdgeInsets.all(20.0),
                     child: Column(
                       children: [
                         Row(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:student_schools/app/routes/app_pages.dart';
 
 import '../../../../widgets/m_app_header.dart';
 
@@ -18,7 +19,7 @@ class NavScreenView extends GetView<NavScreenController> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
+              const Column(
                 children: [
                   MAppHeader(
                     paddin: 0,
@@ -26,7 +27,7 @@ class NavScreenView extends GetView<NavScreenController> {
                   ),
                   SizedBox(height: 10),
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding: EdgeInsets.all(10.0),
                     child: Column(
                       children: [
                         Row(
@@ -60,7 +61,7 @@ class NavScreenView extends GetView<NavScreenController> {
                   )
                 ],
               ),
-              ElevatedButton(onPressed: () {}, child: Text('Logout'))
+              ElevatedButton(onPressed: () {}, child: const Text('Logout'))
             ],
           ),
         ),
@@ -68,35 +69,41 @@ class NavScreenView extends GetView<NavScreenController> {
       appBar: AppBar(
         backgroundColor: Colors.blueGrey,
         actions: [
-          Stack(
-            children: [
-              Container(
-                width: 35,
-                height: 30,
-              ),
-              Icon(
-                Icons.notifications,
-                color: Colors.white,
-                size: 30,
-              ),
-              Positioned(
-                  right: 10,
-                  top: 0,
-                  child: Center(
-                    child: Container(
-                      child: Text('1'),
-                      alignment: Alignment.center,
-                      height: 15,
-                      width: 15,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.amber,
+          InkWell(
+            onTap: () {
+              Get.toNamed(Routes.NOTIFICATION);
+            },
+            child: Stack(
+              alignment: Alignment.centerLeft,
+              children: [
+                const SizedBox(
+                  width: 35,
+                  height: 30,
+                ),
+                const Icon(
+                  Icons.notifications,
+                  color: Colors.white,
+                  size: 30,
+                ),
+                Positioned(
+                    right: 10,
+                    top: 0,
+                    child: Center(
+                      child: Container(
+                        alignment: Alignment.topCenter,
+                        height: 15,
+                        width: 15,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.amber,
+                        ),
+                        child: const Text('1'),
                       ),
-                    ),
-                  )),
-            ],
+                    )),
+              ],
+            ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           )
         ],
@@ -105,16 +112,16 @@ class NavScreenView extends GetView<NavScreenController> {
       floatingActionButton: FloatingActionButton(
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
-              side: BorderSide(color: Colors.orange, width: 5)),
+              side: const BorderSide(color: Colors.orange, width: 5)),
           onPressed: () {
             controller.selectIndex.value = 2;
           },
-          child: Icon(Icons.contact_support)),
+          child: const Icon(Icons.contact_support)),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         notchMargin: 6,
         color: Colors.grey,
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         height: 80,
         child: Row(
           mainAxisSize: MainAxisSize.min,
@@ -126,7 +133,7 @@ class NavScreenView extends GetView<NavScreenController> {
               },
               child: Obx(
                 () => controller.selectIndex.value == 0
-                    ? Column(
+                    ? const Column(
                         children: [
                           Icon(
                             Icons.home,
@@ -138,7 +145,7 @@ class NavScreenView extends GetView<NavScreenController> {
                           ),
                         ],
                       )
-                    : Column(
+                    : const Column(
                         children: [
                           Icon(Icons.home),
                           Text('Home'),
@@ -152,7 +159,7 @@ class NavScreenView extends GetView<NavScreenController> {
               },
               child: Obx(
                 () => controller.selectIndex.value == 1
-                    ? Column(
+                    ? const Column(
                         children: [
                           Icon(
                             Icons.person,
@@ -164,7 +171,7 @@ class NavScreenView extends GetView<NavScreenController> {
                           ),
                         ],
                       )
-                    : Column(
+                    : const Column(
                         children: [
                           Icon(Icons.person),
                           Text('Profile'),

@@ -21,17 +21,17 @@ class LoginScreenController extends GetxController {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('User id'),
-              SizedBox(
+              const Text('User id'),
+              const SizedBox(
                 height: 20,
               ),
-              MInputUser(
+              const MInputUser(
                 hintText: 'user id',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              ElevatedButton(onPressed: () {}, child: Text('Send'))
+              ElevatedButton(onPressed: () {}, child: const Text('Send'))
             ],
           ),
         ),

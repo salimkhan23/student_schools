@@ -7,7 +7,7 @@ import 'package:student_schools/app/modules/profile_screen/views/profile_screen_
 class NavScreenController extends GetxController {
   RxInt selectIndex = 0.obs;
 
-  RxList bodyList = [HomeScreenView(), ProfileScreenView(), NoticsView()].obs;
+  RxList bodyList = [const HomeScreenView(), const ProfileScreenView(), const NoticsView()].obs;
 
   final appDrawer = Drawer(
     backgroundColor: Colors.grey,

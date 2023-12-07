@@ -21,7 +21,7 @@ class HomeEventItem extends StatelessWidget {
             color: Colors.white, borderRadius: BorderRadius.circular(10)),
         child: Row(
           children: [
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Column(
@@ -37,14 +37,14 @@ class HomeEventItem extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Container(
               width: 4,
               color: Colors.orange,
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Column(

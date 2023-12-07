@@ -15,12 +15,12 @@ class UserSelectInputView extends GetView<UserSelectInputController> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          MAssetImage(
+          const MAssetImage(
             path: MImagesPath.onboarding2,
             size: 300,
           ),
-          Padding(
-            padding: const EdgeInsets.all(30.0),
+          const Padding(
+            padding: EdgeInsets.all(30.0),
             child: Center(
               child: Text(
                 'Who are you!',
@@ -39,14 +39,14 @@ class UserSelectInputView extends GetView<UserSelectInputController> {
                     path: MImagesPath.student1,
                     size: 150,
                     onTap: () {
-                      Get.to(LoginScreenView(),
-                          duration: Duration(seconds: 1),
+                      Get.to(const LoginScreenView(),
+                          duration: const Duration(seconds: 1),
                           curve: Curves.ease,
                           arguments: false);
                     },
                   ),
-                  SizedBox(height: 20),
-                  Text('Student'),
+                  const SizedBox(height: 20),
+                  const Text('Student'),
                 ],
               ),
               Column(
@@ -55,14 +55,14 @@ class UserSelectInputView extends GetView<UserSelectInputController> {
                     path: MImagesPath.teacher2,
                     size: 150,
                     onTap: () {
-                      Get.to(LoginScreenView(),
-                          duration: Duration(seconds: 1),
+                      Get.to(const LoginScreenView(),
+                          duration: const Duration(seconds: 1),
                           curve: Curves.ease,
                           arguments: true);
                     },
                   ),
-                  SizedBox(height: 20),
-                  Text('Teacher'),
+                  const SizedBox(height: 20),
+                  const Text('Teacher'),
                 ],
               ),
             ],
